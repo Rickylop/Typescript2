@@ -7,8 +7,13 @@ npm init --yes
 npm install git-commit-msg-linter --save-dev
 echo "node_modules" > .gitignore
 echo "dist" >> .gitignore
+echo "node_modules" > .eslintignore
+echo "dist" >> .eslintignore
 npm i -D eslint-config-standard-with-typescript ts-node eslint
-
+# Para configurar typescript
+tsc --init 
+# No permite realizar commit si hay algun mesaje de eslint
+npm install husky --save-dev
 ```
 
 # links
