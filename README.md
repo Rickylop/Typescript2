@@ -7,6 +7,8 @@ npm init --yes
 npm install git-commit-msg-linter --save-dev
 echo "node_modules" > .gitignore
 echo "dist" >> .gitignore
+npm i -D eslint-config-standard-with-typescript ts-node eslint
+
 ```
 
 # links
