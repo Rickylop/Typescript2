@@ -10,10 +10,14 @@ echo "dist" >> .gitignore
 echo "node_modules" > .eslintignore
 echo "dist" >> .eslintignore
 npm i -D eslint-config-standard-with-typescript ts-node eslint
-# Para configurar typescript
+# Para generar archivo de configuracion typescript automaticamete
 tsc --init 
 # No permite realizar commit si hay algun mesaje de eslint
-npm install husky --save-dev
+npx husky-init && npm install
+npm i -D lint-staged
+# Instalacion de JEST
+npm i -D jest @types/jest ts-jest
+
 ```
 
 # links
@@ -22,4 +26,6 @@ npm install husky --save-dev
 - [Javascript Standas Style](https://standardjs.com/)
 - [Node Green](https://node.green/#ES2018)
 - [Clase 2 Youtube](https://www.youtube.com/watch?v=xIJq9RNGsNQ&list=PLdrSYPg6-NI-fI-6bU0XlwBrkg90XMYKY&index=4)
-- 
+- [Youtube - Configuracion de husky ](https://www.youtube.com/watch?v=cONX5b9MvKQ)
+- [Husky](https://typicode.github.io/husky/#/)
+- [Eslint](https://eslint.org/)
