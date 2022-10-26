@@ -29,3 +29,51 @@ npm i -D jest @types/jest ts-jest
 - [Youtube - Configuracion de husky ](https://www.youtube.com/watch?v=cONX5b9MvKQ)
 - [Husky](https://typicode.github.io/husky/#/)
 - [Eslint](https://eslint.org/)
+
+
+
+
+# Dyarlen Lber chrome-error://chromewebdata
+
+- node --version
+- npm init -y
+- npm i -D typescript @types/node
+- npx tsc --init
+- npm i -D rimraf concurrently
+- npm i module-alias
+- npm i -D nodemon jest @types/jest ts-jest
+- ./node_module/jest/bin/jest.js --init (y, n, node, n, v8, n)
+- npm init @eslint/config
+- npx husky-init && npm install
+- npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
+- npm husky add .husky/pre-commit "npm test"
+- npm install --save-dev lint-staged
+- npm install --save-dev @commitlint/{config-conventional, cli}
+- npm i -D @shelf/jest-mongodb
+- npm i mongodb
+- npm install supertest @types/supertest --save-dev
+
+tsconfig.json  
+```json
+"outDir": "./dist",
+"baseUrl": "./src",
+"phats": {
+    "@domain/*": ["domain/*"],
+    "@application/*": ["application/*"],
+    "@infraestructure/*": ["infraestructure/*"],
+    "@main/*": ["main/*"],
+    "@test/*": ["../test/*"],
+},
+"rootDirs":[
+    "src",
+    "test"
+],
+"include": ["src", "test"],
+"exclude": []
+```
+- min 11:50 -configuracion tsc y moduleNameMaper
+- min 22:20 -Modificando archivo de jest para covertura
+- min 34:20 -inicializando eslint
+- min 44:40 -lint-stage 
+- min 52:15 -congifuracionde color en husky
+- min 57:00 -jest-mongodb

@@ -2,3 +2,5 @@ node_modules
 *un~
 dist
 target
+coverage
+src/ClearArq.ts
