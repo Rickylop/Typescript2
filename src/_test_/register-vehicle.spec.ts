@@ -29,3 +29,17 @@ describe('RegisterVehicle', () => {
     expect(httpResponse.body).toEqual(new Error('Error in the model'))
   })
 })
+
+test('is the year does not exits return 400', () => {
+  const sut = new RegisterVehicle() // Sistem under test
+  const httpRequest = {
+    body: {
+      name: 'Nissan',
+      model: 'DTX'
+      // year: '2020'
+    }
+  }
+  const httpResponse = sut.handle(httpRequest)
+  expect(httpResponse.statusCode).toBe(400)
+  expect(httpResponse.body).toEqual(new Error('Error in the year'))
+})
