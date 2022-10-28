@@ -2,10 +2,10 @@ import { VehicleModel } from '../models/vehicle-model'
 
 describe('Classes', () => {
   it('Class vehicleModel', () => {
-    const vehicleModel = new VehicleModel()
+    const vehicleModel = new VehicleModel('Nissan', 'DXT', 2020)
 
-    expect(vehicleModel.name).toEqual('Nissan')
-    expect(vehicleModel.model).toEqual('DXT')
-    expect(vehicleModel.year).toEqual(2020)
+    expect(vehicleModel.getName()).toEqual('Nissan')
+    expect(vehicleModel.getModel()).toEqual('DXT')
+    expect(vehicleModel.getYear()).toEqual(2020)
   })
 })
