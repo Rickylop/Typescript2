@@ -43,3 +43,17 @@ test('is the year does not exits return 400', () => {
   expect(httpResponse.statusCode).toBe(400)
   expect(httpResponse.body).toEqual(new Error('Error in the year'))
 })
+test('is the color does not exits return 400', () => {
+  const sut = new RegisterVehicle() // Sistem under test
+  const httpRequest = {
+    body: {
+      name: 'Nissan',
+      model: 'DTX',
+      year: '2020'
+      // color: 'black'
+    }
+  }
+  const httpResponse = sut.handle(httpRequest)
+  expect(httpResponse.statusCode).toBe(400)
+  expect(httpResponse.body).toEqual(new Error('Error in the color'))
+})
