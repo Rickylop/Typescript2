@@ -1,5 +1,7 @@
+import { HttpResponse, HttpRequest } from './../interfaces/http-interface'
+
 export class RegisterVehicle {
-  handle (httpRequest: any): any {
+  handle (httpRequest: HttpRequest): HttpResponse {
     const properties = ['name', 'model', 'year']
 
     for (const props of properties) {
