@@ -1,3 +1,4 @@
+import { FoodHelper } from './../helpers/food-model-helper'
 import { FoodModel } from './../models/food-model'
 
 describe('class', () => {
@@ -12,5 +13,9 @@ describe('class', () => {
     expect(food.getName()).toEqual('Pescado')
     expect(food.getDescription()).toEqual('Proteina')
     expect(food.getPrice()).toEqual(200)
+  })
+  it('food Helper', () => {
+    const foodHelper = new FoodHelper()
+    expect(foodHelper).toEqual(foodHelper)
   })
 })
