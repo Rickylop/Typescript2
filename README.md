@@ -18,6 +18,11 @@ npm i -D lint-staged
 # Instalacion de JEST
 npm i -D jest @types/jest ts-jest
 
+npm i express
+npm i -D supertest ts-node-dev
+npm i -D @types/express @types/supertest 
+npm i -D dotenv
+
 ```
 
 # links
